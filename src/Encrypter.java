@@ -34,6 +34,22 @@ public class Encrypter {
      */
     public void encrypt(String inputFilePath, String encryptedFilePath) throws Exception {
         //TODO: Call the read method, encrypt the file contents, and then write to new file
+        String message = "";
+         try(Scanner fileScanner = new Scanner(Paths.get(fileName))){
+            while(fileScanner.hasNextLine()){
+                String line = fileScanner.nextLine();                
+                while(line != null){
+                    for(int i=0; i<line.length();i++){
+                    //get each character and undo the encryption
+                    message = message + //name of un-encrypted char;
+                    }
+                }
+            }
+            fileScanner.close();
+        }catch(Exception e){
+            System.out.println("ERROR: "+e.toString());
+        }
+        return message;
     }
 
     /**
@@ -55,9 +71,7 @@ public class Encrypter {
      * @throws Exception if an error occurs while reading the file
      */
     private static String readFile(String filePath) throws Exception {
-        String message = "";
-        //TODO: Read file from filePath
-        return message;
+        
     }
 
     /**
@@ -68,6 +82,7 @@ public class Encrypter {
      */
     private static void writeFile(String data, String filePath) {
         //TODO: Write to filePath
+        
     }
 
     /**
